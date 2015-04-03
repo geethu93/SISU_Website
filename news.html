@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SISU Global Health - News</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Sisu News">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+
+<style>
+/* -------------------------------------
+ * timeline
+ * ------------------------------------- */
+#timeline {
+  list-style: none;
+  margin: 50px 0 30px 120px;
+  padding-left: 30px;
+  border-left: 8px solid #000;
+}
+#timeline li {
+  margin: 40px 0;
+  position: relative;
+}
+#timeline p {
+  margin: 0 0 15px;
+}
+
+.date {
+  margin-top: -10px;
+  top: 50%;
+  left: -140px;
+  font-size: 0.95em;
+  line-height: 20px;
+  position: absolute;
+}
+
+.circle {
+  margin-top: -10px;
+  top: 50%;
+  left: -44px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 5px solid #000;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+.content {
+  max-height: 20px;
+  padding: 50px 20px 0;
+  border-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5em;
+  position: relative;
+}
+.content:before, .content:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  position: absolute;
+  pointer-events: none;
+  right: 100%;
+}
+.content:before {
+  border-right-color: inherit;
+  border-width: 20px;
+  top: 50%;
+  margin-top: -20px;
+}
+.content:after {
+  border-right-color: #fff;
+  border-width: 17px;
+  top: 50%;
+  margin-top: -17px;
+}
+.content p {
+  max-height: 0;
+  color: transparent;
+  text-align: justify;
+  word-break: break-word;
+  hyphens: auto;
+  overflow: hidden;
+}
+
+label {
+  font-size: 1.3em;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  top: 20px;
+  transition: transform 0.2s linear;
+}
+
+.radio {
+  display: none;
+}
+
+.radio:checked + .relative label {
+  cursor: auto;
+  transform: translateX(42px);
+}
+.radio:checked + .relative .circle {
+  background: #f98262;
+}
+.radio:checked ~ .content {
+  max-height: 180px;
+  border-color: #000;
+  margin-right: 20px;
+  transform: translateX(20px);
+  transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
+}
+.radio:checked ~ .content p {
+  max-height: 200px;
+  color: #000;
+  transition: color 0.3s linear 0.3s;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <img src = "images/logo.png">
+  <nav>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="products.html">Products</a></li>
+		<li><a href="news.html">News</a></li>
+		<li><a href="blog.html">Blog</a></li>
+		<li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Insert timeline here with information katie provides -->
+
+  <ul id='timeline'>
+  <li class='work'>
+    <input class='radio' id='work7' name='works' type='radio' checked>
+    <div class="relative">
+      <label for='work7'>DreamIt Health Baltimore Accelerator</label>
+      <span class='date'>Mar 10, 2015</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        <a href="http://www.dreamithealth.com/b15/">DreamIt Health</a> is an accelerator designed to streamline companies for investment and growth.  They have strong connections here in Baltimore including Johns Hopkins University, <a href="http://www.biohealthinnovation.org/">BioHealth Innovations</a>, the <a href="http://www.abell.org/">Abell Foundation</a> and many other strategic health partners in the Maryland and DC areas. If you want to come see our Demo Day in mid-May and see our progress, contact us!
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work6' name='works' type='radio'>
+    <div class="relative">
+      <label for='work6'>Unite for Sight's Social Entreprenuership Institute</label>
+      <span class='date'>Nov 4, 2014</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        The Social Entrepreneurship Institute will draw public health, social entrepreneurship, and education professionals and students for a focused, highly interactive and collaborative institute on quality, effective involvement in global health, social entrepreneurship, and international development. The expert speakers will offer key lessons, mentoring, and guidance about strategies that participants can apply to their work in global health, social entrepreneurship, international development, and education.
+
+        Sisu Global Health will attend the December 5th event in New Haven and will potentiallly present its model to the distinguished participants including the President Kagame's adviser for economic development, big data gurus in Africa, and other believers in business for change. 
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work5' name='works' type='radio'>
+    <div class="relative">
+      <label for='work5'>Social Innovation Summit - San Francisco</label>
+      <span class='date'>Nov 4, 2014</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        Sisu Global Health's Chief Marketing Officer, Katie Kirsch, will be attending the Social Innovation Summit (SISW) in San Francisco, November 19th and 20th.
+
+        SISW is a twice annual event taking place at the United Nations and Silicon Valley, that represents a global convening of black swans and wayward thinkers. Those who are playing at the nexus of technology, investment, philanthropy, international development, and business come together to investigate solutions and catalyze inspired partnerships that are disrupting history.       </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work4' name='works' type='radio'>
+    <div class="relative">
+      <label for='work4'>TechCon 2014 - San Francisco</label>
+      <span class='date'>Nov 4, 2014</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        Sisu Global Health will be featured in USAID's Higher Education Solutions Network's TechCon 2014 this weekend in San Francisco. Come see us at the Innovation Marketplace on Berkeley's campus on Monday, November 10th. 
+
+        TechCon is a unique convening of researchers and students, entrepreneurs and innovators, field practitioners, and private sector professionals focused on creative approaches to solution ideation, testing, and scaling for international development. TechCon 2014 will bring together these multisectoral stakeholders to energize science and technology solutions for development.      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work3' name='works' type='radio'>
+    <div class="relative">
+      <label for='work3'>Attended AABB's Annual Meeting</label>
+      <span class='date'>Nov 4, 2014</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        Sisu Global Health's CTO, Gillian Henker, had a great time at the American Association for Blood Banks' Annual Meeting in Philadelphia. Great connections were made! Check out our blog for more details. 
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work2' name='works' type='radio'>
+    <div class="relative">
+      <label for='work2'>Featured in Entreprenuer Magazine</label>
+      <span class='date'>Oct 6, 2014</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        Sisu Global Health was featured in the October edition of Entrepreneur magazine in an article called "3 Student Startups that are Going the Distance". The article features three startups that began in college but have grow their businesses beyond school. You can see the recently released online version here. 
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work1' name='works' type='radio'>
+    <div class="relative">
+      <label for='work1'>Emerging Biosciences Showcase Runner-Up</label>
+      <span class='date'>Oct 6, 2014</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        Sisu Global Health took 2nd place at the MichBio Expo in Detroit last week. The event brought together medical device companies, investors, experts and politicians including Senator Debbie Stabenow, Senator Carl Levin and FDA Commissioner, Margaret Hamburg. You can read more about the event here. 
+      </p>
+    </div>
+  </li>
+</ul>
+ 
+</main>
+
+
+<footer>
+  <p>&copy SISU 2015</p>
+</footer>
+
+</body>
+</html>
+
+
+
+</body>
+</html>
